@@ -12,7 +12,7 @@ function App() {
 			const result = await API.get('/users', {
 				params: {
 					per_page: config.itemsPerPage,
-					delay: 30
+					delay: 15
 				}
 			});
 			setData(result.data);

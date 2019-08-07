@@ -1,6 +1,6 @@
 const config = {
     baseUrl: 'https://reqres.in/api/',
-    itemsPerPage: 12, 
+    itemsPerPage: 5, 
     defaultResponseType: 'json'
 };
 export default config;
