@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import config from "./utils/config";
+import API from './utils/API';
+import Header from './components/Header';
+import UserList from './components/UserList';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [ users, setData ] = useState({ data: [] });
+
+	useEffect(() => {
+		(async () => {
+			const result = await API.get('/users', {
+				params: {
+					per_page: config.itemsPerPage,
+					delay: 30
+				}
+			});
+			setData(result.data);
+		})();
+	}, []);
+
+	return (
+		<React.Fragment>
+			<Header />
+			<UserList users={users.data} loader={config.itemsPerPage}/>
+		</React.Fragment>
+	);
 }
 
 export default App;
+
+
