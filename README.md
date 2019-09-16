@@ -1,6 +1,6 @@
-#Skelton Loader 
+#Skeleton Loader 
 
-Skelton loader example built with React and Styled Components. 
+Skeleton loader example built with React and Styled Components. 
 
 yarn install
 
