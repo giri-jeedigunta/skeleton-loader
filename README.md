@@ -4,8 +4,9 @@ Skelton loader example built with React and Styled Components.
 
 yarn install
 
-
 yarn start  
+
+
 
 Screenshots: https://github.com/giri-jeedigunta/skelton-loader/tree/master/screenshots
 
