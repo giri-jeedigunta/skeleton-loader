@@ -1,6 +1,7 @@
 #Skeleton Loader 
 
 Skeleton loader example built with React and Styled Components. 
+Demo: https://codesandbox.io/embed/github/giri-jeedigunta/skeleton-loader/tree/master/?fontsize=14
 
 yarn install
 
